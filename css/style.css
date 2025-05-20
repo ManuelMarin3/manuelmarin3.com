@@ -474,18 +474,22 @@ body {
     }
   }
   
-  /* Extra-small phones */
-  @media (max-width: 480px) {
-    .experience-grid {
-      grid-template-columns: 1fr;
-    }
-    .experience-item img {
-      width: 60px;
-    }
-    .experience-item span {
-      font-size: 0.85rem;
-    }
+/* Mobile: two-column grid + larger icons */
+@media (max-width: 480px) {
+  .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
   }
+  .experience-item img {
+    width: 100px;
+    height: auto;
+  }
+  .experience-item span {
+    font-size: 1rem;
+  }
+}
+
   
   /* —————————————————————————————
      Shrink header and text on small screens
